@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Report</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-left">
+                <img src="./images/WhatsApp_Image.png" alt="" srcset="" class="nav-logo">
+                <div class="menu">
+                    <img src="./images/burger.png" alt="" srcset="" class="hamburger">
+                    <div class="menu-drop">
+                        <span>Menu</span>
+                        <img src="./images/down-arrow.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="nav-right">
+                <form class="search">
+                    <input type="text" name="" id="" placeholder="Search">
+                    <img src="./images/search.png" alt="" srcset="">
+                </form>
+                <button class="broadcast-btn">Send a Broadcast Message</button>
+                <div class="person">
+                    <img src="./images/frame.png" alt="" srcset="" class="avatar">
+                    <span>William</span>
+                    <img src="./images/down-arrow.png" alt="" srcset="">
+                </div>
+            </div>
+        </nav>
+        <section class="nav-chart">
+            <div class="navigation">
+                <h6>NAVIGATION</h6>
+                <div class="navigation-list">
+                    <div class="navigation-listitem">
+                        <img src="./images/airplay.png" alt="" srcset="">
+                        <span>Overview</span>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/mail.png" alt="" srcset="">
+                        <span>Messages</span>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/department.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Department/Groups</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/user-plus.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Members</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/branch.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Branches</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/users.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>People Mgt</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/tv.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Setup Website</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/finance.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Fianace</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem acc-arrow" >
+                        <img src="./images/clarity_users-line.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Attendance</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right" id="arrow-right">
+                        </div>
+                        <ul id="accordion">
+                            <li>Infographic Report</li>
+                        </ul>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/classes.png" alt="" srcset="">
+                        <span>Church Classes</span>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/pie-chart.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Reports</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/solid_store.png" alt="" srcset="">
+                        <div class="span-arrow">
+                            <span>Our Store</span>
+                            <img src="./images/arrow-right.png" alt="" class="arrow-right">
+                        </div>
+                    </div>
+                    <div class="navigation-listitem">
+                        <img src="./images/uil_setting.png" alt="" srcset="">
+                        <span>Settings</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chart">
+                <div class="chart-head">
+                    <h5>Attendance Report</h5>
+                    <form class="select-filter">
+                        <select name="" id="month-week" class="monthly">
+                            <option value="monthly-rep">Monthly</option>
+                            <option value="weekly-rep">Weekly</option>
+                        </select>
+                        <button type="submit" class="filter">Filter</button>
+                    </form>
+                </div>
+                <div class="month-weekrep">
+                    <div class="chart-main main-monthly" id="monthly-rep">
+                        <div class="doughnut">
+                            <h6>Monthly Report</h6>
+                            <div class="date-services">
+                                <select name="" id="" class="months">
+                                    <option value="">January</option>
+                                    <option value="">February</option>
+                                    <option value="">March</option>
+                                    <option value="">April</option>
+                                    <option value="">May</option>
+                                    <option value="">June</option>
+                                    <option value="">July</option>
+                                    <option value="">August</option>
+                                    <option value="">September</option>
+                                    <option value="">October</option>
+                                    <option value="">November</option>
+                                    <option value="">December</option>
+                                </select>
+                                <div class="services">
+                                    <span>Services</span>
+                                    <select name="" id="" class="services-sel">
+                                        <option value="">First Service</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="my-chart chart-one" >
+                                <div class="doughchart-labelsleft">
+                                    <div class="label-wrap">
+                                        <div class="label-info">
+                                            <div class="color color-one"></div>
+                                            <span class="label-num">300</span>
+                                            <div class="label-per">35%</div>
+                                        </div>
+                                        <span class="label-desc">Men</span>
+                                    </div>
+                                    <div class="label-wrap">
+                                        <div class="label-info">
+                                            <div class="color color-two"></div>
+                                            <span class="label-num">500</span>
+                                            <div class="label-per">55%</div>
+                                        </div>
+                                        <span class="label-desc">Women</span>
+                                    </div>
+                                    <div class="label-wrap"> 
+                                        <div class="label-info">
+                                            <div class="color color-three"></div>
+                                            <span class="label-num">120</span>
+                                            <div class="label-per">23%</div>
+                                        </div>
+                                        <span class="label-desc">Children</span>
+                                    </div>
+                                    <div class="label-wrap"> 
+                                        <div class="label-info">
+                                            <div class="color color-four"></div>
+                                            <span class="label-num">150</span>
+                                            <div class="label-per">15%</div>
+                                        </div>
+                                        <span class="label-desc">Teens</span>
+                                    </div>
+                                </div>
+                                <div class="canvas-dough">
+                                    <canvas id="chart-monthdoughnut"></canvas>
+                                    <div class="total">
+                                        <span class="total-num">1,070</span>
+                                        <span class="total-att">Total Attendees</span>
+                                    </div>
+                                </div>
+                                <div class="doughchart-labelsright">
+                                    <div class="label-wrap last">
+                                        <div class="label-info">
+                                            <div class="color color-five"></div>
+                                            <span class="label-num">10</span>
+                                            <div class="label-per">5%</div>
+                                        </div>
+                                        <span class="label-desc">First Timer</span>
+                                    </div>
+                                    <div class="label-wrap last">  
+                                        <div class="label-info">
+                                            <div class="color color-six"></div>
+                                            <span class="label-num">12</span>
+                                            <div class="label-per">5%</div>
+                                        </div>
+                                        <span class="label-desc">Second Timer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="per-ret">
+                                <div class="per-growth">
+                                    <div class="percent">%</div>
+                                    <div class="percent-info">
+                                        <span class="per-num">60%</span>
+                                        <span class="per-text">Percentage Growth</span>
+                                    </div>
+                                </div>
+                                <div class="ret-rate">
+                                    <div class="percent">%</div>
+                                    <div class="percent-info">
+                                        <span class="per-num">70%</span>
+                                        <span class="per-text">Percentage Growth</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <h6>Church Percentage Growth</h6>
+                            <div class="year">
+                                <select name="" id="">
+                                    <option value="">2022</option>
+                                </select>
+                            </div>
+                            <div class="chart-labels"></div>
+                            <div class="my-chart chart-two">
+                                <canvas  id="chart-monthline" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-main main-weekly" id="weekly-rep">
+                        <div class="doughnut">
+                            <h6>Weekly Report</h6>
+                            <div class="date-services">
+                                <input type="date" name="" id="date-input">
+                                <div class="services">
+                                    <span>Services</span>
+                                    <select name="" id="" class="services-sel">
+                                        <option value="">First Service</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="my-chart chart-one" >
+                                <div class="doughchart-labelsleft">
+                                    <div class="label-wrap">
+                                        <div class="label-info">
+                                            <div class="color color-one"></div>
+                                            <span class="label-num">300</span>
+                                            <div class="label-per">35%</div>
+                                        </div>
+                                        <span class="label-desc">Men</span>
+                                    </div>
+                                    <div class="label-wrap">
+                                        <div class="label-info">
+                                            <div class="color color-two"></div>
+                                            <span class="label-num">500</span>
+                                            <div class="label-per">55%</div>
+                                        </div>
+                                        <span class="label-desc">Women</span>
+                                    </div>
+                                    <div class="label-wrap"> 
+                                        <div class="label-info">
+                                            <div class="color color-three"></div>
+                                            <span class="label-num">120</span>
+                                            <div class="label-per">23%</div>
+                                        </div>
+                                        <span class="label-desc">Children</span>
+                                    </div>
+                                    <div class="label-wrap"> 
+                                        <div class="label-info">
+                                            <div class="color color-four"></div>
+                                            <span class="label-num">150</span>
+                                            <div class="label-per">15%</div>
+                                        </div>
+                                        <span class="label-desc">Teens</span>
+                                    </div>
+                                </div>
+                                <div class="canvas-dough">
+                                    <canvas id="chart-weekdoughnut"></canvas>
+                                    <div class="total">
+                                        <span class="total-num">1,070</span>
+                                        <span class="total-att">Total Attendees</span>
+                                    </div>
+                                </div>
+                                <div class="doughchart-labelsright">
+                                    <div class="label-wrap last">
+                                        <div class="label-info">
+                                            <div class="color color-five"></div>
+                                            <span class="label-num">10</span>
+                                            <div class="label-per">5%</div>
+                                        </div>
+                                        <span class="label-desc">First Timer</span>
+                                    </div>
+                                    <div class="label-wrap last">  
+                                        <div class="label-info">
+                                            <div class="color color-six"></div>
+                                            <span class="label-num">12</span>
+                                            <div class="label-per">5%</div>
+                                        </div>
+                                        <span class="label-desc">Second Timer</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="per-ret">
+                                <div class="per-growth">
+                                    <div class="percent">%</div>
+                                    <div class="percent-info">
+                                        <span class="per-num">60%</span>
+                                        <span class="per-text">Percentage Growth</span>
+                                    </div>
+                                </div>
+                                <div class="ret-rate">
+                                    <div class="percent">%</div>
+                                    <div class="percent-info">
+                                        <span class="per-num">70%</span>
+                                        <span class="per-text">Percentage Growth</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <h6>Church Percentage Growth</h6>
+                            <div class="year">
+                                <select name="" id="">
+                                    <option value="">2022</option>
+                                </select>
+                            </div>
+                            <div class="my-chart chart-two">
+                                <canvas class="" id="chart-weekline" height="200"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+            $("#month-week").on("change", function() {
+                $(".chart-main").hide();
+                $("#" + $(this).val()).fadeIn(700);
+            }).change();
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <script src="./script.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./apex.js"></script>-->
+</body>
+</html>
