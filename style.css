@@ -218,6 +218,9 @@ select {
     background-repeat: no-repeat;
     background-position-x: 90%;
     background-position-y: 50%;
+    -moz-appearance:none;
+    -webkit-appearance:none; 
+    appearance:none;
 }
 
 select.monthly {
@@ -235,7 +238,6 @@ select.monthly {
     margin-right: .3rem;
     
 }
-
 
 button.filter {
     background-color: #0948A9;
@@ -340,9 +342,7 @@ select.services-sel {
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-    appearance: none;
+    opacity: 0;
 }
 
 
